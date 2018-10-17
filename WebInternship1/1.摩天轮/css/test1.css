@@ -1,0 +1,133 @@
+*{
+    /*重置样式*/
+    /*margin 外边距 padding 内边距*/
+    margin: 0;
+    padding: 0;
+}
+    /*标签选择器*/
+body{
+    background: url(../img/2.jpg);
+}
+
+#mtl{
+    width: 768px;
+    height: 768px;
+    background: url(../img/fsw.png);
+    position: absolute;
+    /*定位居中*/
+    left:50%;
+    margin-left: -384px;
+    /*水平居中*/
+   	animation: rotate1 6s linear infinite;
+}
+
+	/*类选择器*/
+.bracket{
+	width: 366px;
+	height: 530px;
+	background: url(../img/bracket.png);
+	position: absolute;
+	left: 0;
+	right: 0;	
+	margin: auto;
+	bottom: -100px;
+}
+
+div:nth-child(3){
+	width: 252px;
+	height: 498px;
+	background: url(../img/bracketsmall.png);
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -80px;
+	margin: auto;
+}
+div:nth-child(4){
+	width: 48px;
+	height: 64px;
+	background: url(../img/arrow.png);
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 170px;
+	margin: auto;
+}
+div:nth-child(5){
+	width: 577px;
+	height: 257px;
+	background: url(../img/big-title.png);
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 256px;
+	margin: auto;
+}
+div:nth-child(6){
+	width: 413px;
+	height: 139px;
+	background: url(../img/title.png);
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 184px;
+	margin: auto;
+}
+/*后代、派生选择器*/
+#mtl ul li{
+	width: 130px;
+	height: 170px;
+	/*background: blue;*/
+	position: absolute;
+	list-style: none;
+	animation: rotate2 6s linear infinite;
+}
+li:nth-child(1){
+	background: url(../img/boy.png);
+	left: 326px;
+	top: -58px;	
+}
+li:nth-child(2){
+	background: url(../img/girl.png);
+	left: -23px;
+	top: 298px;		
+}
+li:nth-child(3){
+	background: url(../img/girls.png);
+	left: 81px;
+	top: 542px;	
+}
+li:nth-child(4){
+	background: url(../img/dog.png);
+	left: 326px;
+	top: 626px;		
+}
+li:nth-child(5){
+	background: url(../img/hairboy.png);
+	left: 566px;
+	top: 43px;			
+}
+li:nth-child(6){
+	background: url(../img/mimi.png);
+	left: 566px;
+	top: 542px;		
+}
+li:nth-child(7){
+	background: url(../img/mudog.png);
+	left: 656px;
+	top: 298px;	
+}
+li:nth-child(8){
+	background: url(../img/shamegirl.png);
+	left: 81px;
+	top: 43px;		
+}
+
+@keyframes rotate1{
+	from{transform: rotate(0deg);}
+	to{transform: rotate(360deg);}
+}
+@keyframes rotate2{
+	from{transform: rotate(0deg);}
+	to{transform: rotate(-360deg);}
+}

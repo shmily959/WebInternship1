@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 640px;
+				height: 320px;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+			}
+			#box ul li{
+				list-style: none;
+				width: 640px;
+				height: 320px;
+				position: absolute;
+				/*隐藏所有的li*/
+				display: none;
+			}
+			.btn{
+				width: 30px;
+				height: 50px;
+				/*内部文字居中*/
+				text-align: center;
+				/*行高,当文字只有一行时,行高=元素高度,即垂直居中*/
+				line-height: 50px;
+				background: black;
+				color: white;
+				opacity: 0.6;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				/*鼠标放入箭头样式*/
+				cursor: pointer;
+			}
+			#right{
+				right: 0;
+			}
+			.circles{
+				bottom: 0;
+				width: 100%;
+				height: 20px;
+				position: absolute;
+			}
+			.circles span{
+				/*块级元素*/
+				display: block;
+				width: 10px;
+				height: 10px;
+				background: white;
+				/*圆角属性,50%为圆*/
+				border-radius: 50%;
+				float: left;
+				margin-left: 10px;
+			}
+			.current{
+				background: gray!important;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<ul>
+				<li style="display: block;"><img src="img/img1.jpg" alt="img1" /></li>
+				<li><img src="img/img2.jpg" alt="img2" /></li>
+				<li><img src="img/img3.jpg" alt="img3" /></li>
+				<li><img src="img/img4.jpg" alt="img4" /></li>
+				<li><img src="img/img5.jpg" alt="img5" /></li>
+			</ul>
+			<div class="btn" id="left"> < </div>
+			<div class="btn" id="right"> > </div>
+			<div class="circles">
+				<span class="current"></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+		<script src="js/Jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+//			$()找到元素,支持所有的CSS选择器
+//			eq是找到对应的第几个元素
+//			fadeOut淡出效果,参数是消失的时间
+				var currentIndex=0;
+				var nextIndex=1;
+				var timer;
+				timer=setInterval(move,2000)
+				$("#box").mouseover(function(){
+					clearInterval(timer);
+				})
+				$("#box").mouseleave(function(){
+					timer=setInterval(move,2000)
+				})
+				function move(){
+					$("li").eq(currentIndex).fadeOut(400);
+					$("li").eq(nextIndex).fadeIn(400);
+					$("span").eq(currentIndex).removeClass("current");
+					$("span").eq(nextIndex).addClass("current");
+					currentIndex=nextIndex;
+					nextIndex++;
+					if(nextIndex>4){
+						nextIndex=0;
+					}
+				}
+				$("#right").click(function(){
+					move();
+				})
+				$("#left").click(function(){
+					nextIndex=currentIndex-1;
+					if(nextIndex<0){
+						nextIndex=4;
+					}
+					move();
+				})
+				$("span").mouseover(function(){
+//					console.log($(this).index())	
+					nextIndex=$(this).index();
+					move();
+				})
+		</script>
+	</body>
+</html>
