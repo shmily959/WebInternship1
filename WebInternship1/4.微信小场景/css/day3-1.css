@@ -1,0 +1,254 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.content{
+	position: absolute;
+	/*top: -100%;*/
+}
+
+.page{
+	position: relative;
+	/*相对定位*/
+}
+
+img{
+	position: absolute;
+}
+
+.page1{
+	background: #00ccff;
+}
+
+.page1-Building{
+	width: 100%;
+	height: 30%;
+	bottom: 0;
+	display: none;
+}
+
+.page1-Elements{
+	width: 100%;
+	height: 100%;
+	animation: zooming 2s linear infinite;
+}
+
+.page1-Cloud{
+	width: 90%;
+	height: 90%;
+	animation: zooming 2s linear infinite;
+}
+
+@keyframes zooming{
+	0%{transform: scale(1);}
+	50%{transform: scale(0.9);}
+	100%{transform: scale(1);}
+}
+
+.page1-Txt{
+	width: 60%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 15%;
+}
+
+.page1-Flower01{
+	top: 14%;
+	width: 20%;
+	left: 7%;
+	z-index: 1;
+	animation: rotate 3s linear infinite;
+}
+
+.page1-Flower02{
+	left: 62%;
+	width: 23%;
+	top: 27%;
+	z-index: 1;
+	animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate{
+	0%{transform: rotate(0deg);}
+	16%{transform: rotate(30deg);}
+	32%{transform: rotate(10deg);}
+	48%{transform: rotate(0deg);}
+	64%{transform: rotate(-30deg);}
+	80%{transform: rotate(-10deg);}
+	100%{transform: rotate(0deg);}
+}
+
+.page1-Flight{
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 50%;
+	width: 0;
+	animation: flight 4s linear infinite;
+}
+
+@keyframes flight{
+	0%{transform: scale(1);}
+	50%{transform: scale(1.2);}
+	100%{transform: scale(1);}
+}
+
+
+.page1-Stars{
+	width: 100%;
+}
+
+
+.page2{
+	background: aquamarine;
+}
+
+.page2-Bg{
+	width: 100%;
+	height: 100%;
+}
+
+.page2-Farm{
+	width: 70%;
+	right: 0;
+	top: 20%;
+	display: none;
+}
+
+.page2-IT{
+	width: 70%;
+	right: 0;
+	top: 60%;
+	display: none;
+}
+
+.page2-Star{
+	width: 100%;
+	height: 100%;
+}
+
+.page3{
+	background: blue;
+}
+
+.page3-Bg{
+	width: 100%;
+	height: 100%;
+}
+
+.page3-bus{
+	z-index: 1;
+	width: 65%;
+	bottom: 10%;
+}
+
+.page3-Avatar{
+	z-index: 1;
+	width: 30%;
+	right: 5%;
+	bottom: 12%;
+}
+
+.page3-BusStation{
+	width: 100%;
+	bottom: 0;
+}
+
+.page3-Title1,.page3-Title2{
+	width: 40%;
+}
+
+.page3-Title1{
+	z-index: 1;
+	display: none;
+}
+
+.page3-Title2{
+	z-index: 1;
+	top: 12%;
+	display: none;
+}
+
+.page3-TAvatar{
+	top: 25%;
+	right: 16%;
+	display: none;
+}
+
+.page3-TSpace{
+	top: 25%;
+	width: 0;
+	left: 10%;
+}
+
+.page3-TWall{
+	bottom: 0;
+	right: 0;
+	height: 65%;
+	width: 30%;
+	display: none;
+}
+
+.page3-TWhere{
+	bottom: 5%;
+	left: 5%;
+	width: 0;
+}
+
+.page4{
+	background: pink;
+}
+
+.page4-lightoffBg{
+	width: 100%;
+	height: 100%;
+}
+
+.page4-lightoff{
+	z-index: 1;
+    bottom: 0;
+    left: 5%;
+    height: 70%;
+}
+
+.page4-cornerTitle{
+	z-index: 1;
+	top: 10%;
+    right: 0;
+}
+
+.page4-clickGuide{
+	z-index: 1;
+    width: 70%;
+    top: 41%;
+    left: 27%;
+}
+
+.page4-lightonBg{
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+.page4-lighton{
+	z-index: 1;
+    bottom: 0;
+    left: 5%;
+    height: 70%;
+    display: none;
+}
+
+.page4-you{
+	display: none;
+	top: 33%;
+    left: 26%;
+    width: 56%;
+}
+
+.musicBtn{
+	right: 0;
+	top: 0;
+}
+

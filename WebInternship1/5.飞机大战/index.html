@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>飞机大战游戏</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+		</style>
+	</head>
+	<body>
+		<button>开始游戏</button>
+		<script src="js/Jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Game.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Map.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Flight.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Bullets.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Enemies.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script type="text/javascript">
+			$("button").click(function(){
+//				点击button,初始化游戏
+				Game.init();
+			})
+		</script>
+	</body>
+</html>
