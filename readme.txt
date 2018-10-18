@@ -1,3 +1,1 @@
-Git is a version control system.
-Git is free software.
-Creating a new branch is quick AND simlp.
+这是对Web的初步实习,主要包含了一些H5,CSS3,JS的一些练手项目.
